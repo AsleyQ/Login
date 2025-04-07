@@ -6,14 +6,14 @@ import { TextInput } from 'react-native-gesture-handler';
 
 const LoginScreen = ({navigation}: any) => {
     //Estado para el usuario y contraseña
-    const [usuario, setUsuario]= useState('');
+    //const [usuario, setUsuario]= useState('');
     const [password,setPassword] = useState('');
     const [correo, setCorreo]= useState('');
 
     //Función para validar y redirigir
     const manejarLogin=async() =>{
         //Validar campos vacios
-        if(!usuario||!password){
+        if(!correo||!password){
             Alert.alert('Error', 'Todos los campos son obligatorios')
             return;
         }
@@ -45,8 +45,8 @@ const LoginScreen = ({navigation}: any) => {
             <Text style={styles.title}>Iniciar Sesion</Text>
             <TextInput  placeholder="Usuario"
             style={styles.input}
-            value={usuario}
-            onChangeText={setUsuario} />
+            value={correo}
+            onChangeText={setCorreo} />
             
             <TextInput
             placeholder="Contraseña"
